@@ -1,10 +1,10 @@
 /* -- OBJECTS -- */
 class Item {
-    constructor(name, multiplier, cost, extras) {
+    constructor(name, multiplier, cost, extra) {
         this.name = name; 
         this.multiplier = multiplier;
         this.cost = cost;
-        const extras = extras || {};
+        const extras = extra || {};
         this.affects = extras.affects || "persecond";
         this.unlocked = extras.unlocked || false;
         this.tooltip = extras.tooltip || `Increases Cookies Per ${(this.affects == "persecond") ? "Second" : "Click"} by <br />${multiplier} per unit owned.`;
